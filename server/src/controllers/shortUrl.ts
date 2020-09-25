@@ -57,18 +57,12 @@ const redirectToUrlBySlug = async (
         // redirect to saved url in the database
         res.redirect(url);
       } else {
-        // if env:CLIENT_URI provided, then redirect to the client
-        // if not, the send error with status code 400
-        process.env.CLIENT_URI
-          ? res.redirect(process.env.CLIENT_URI)
-          : res.status(400).json({ error: "slug not found!" });
+        // if not url found, redirect to '/'
+        res.redirect("/");
       }
     } else {
-      // if not active, then redirect to the client
-      // if no env:CLIENT_URI provided, then send error with status code 400
-      process.env.CLIENT_URI
-        ? res.redirect(process.env.CLIENT_URI)
-        : res.status(400).json({ error: "not active!" });
+      // if not active, redirect to '/'
+      res.redirect("/");
     }
   } catch (error) {
     // send error with status code 400
