@@ -8,7 +8,7 @@
     "watch": "tsc -w",
     "dev": "nodemon dist/app.js",
     "start": "node dist/app.js",
-    "heroku-postbuild": "cd web && yarn && yarn run build"
+    "heroku-postbuild": "cd web && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
