@@ -1,14 +1,18 @@
 {
   "name": "url-shortener",
   "version": "1.0.0",
-  "description": "",
+  "description": "Url shortener",
   "main": "index.js",
+  "engines": {
+    "yarn": "1.x",
+    "node": "12.x"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "dev": "nodemon dist/app.js",
     "start": "node dist/app.js",
-    "heroku-postbuild": "cd web && npm install && npm run build"
+    "heroku-postbuild": "cd web && yarn && yarn run build"
   },
   "keywords": [],
   "author": "",
