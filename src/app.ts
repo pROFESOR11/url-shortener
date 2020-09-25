@@ -11,7 +11,7 @@ const app: Express = express();
 
 const PORT: string | number = process.env.PORT || 4000;
 
-app.use(express.static(path.resolve(__dirname + "../../../web/build")));
+app.use(express.static(path.resolve(__dirname + "../../web/build")));
 app.use(cors());
 app.enable("trust proxy");
 app.use(helmet());
@@ -20,12 +20,7 @@ app.use(express.json());
 app.use(urlRoutes);
 
 app.get("*", (_req, res: Response) => {
-  console.log("here");
-  console.log(
-    "object",
-    path.resolve(__dirname + "../../../web/build/index.html")
-  );
-  res.sendFile(path.resolve(__dirname + "../../../web/build/index.html"));
+  res.sendFile(path.resolve(__dirname + "../../web/build/index.html"));
 });
 
 const uri: string = process.env.MONGODB_URI!;
