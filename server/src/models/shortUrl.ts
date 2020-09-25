@@ -1,6 +1,5 @@
 import { IShortUrl } from "./../types/shortUrl";
 import { model, Schema } from "mongoose";
-import { boolean } from "yup";
 
 const shortUrlSchema: Schema = new Schema(
   {
