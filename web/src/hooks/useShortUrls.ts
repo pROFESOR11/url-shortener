@@ -1,8 +1,9 @@
 import { useQuery } from "react-query";
 import axios from "axios";
+import { getRoot } from "../utils/helpers";
 
 const getShortUrls = async () => {
-  const { data } = await axios.get(`${process.env.REACT_APP_SERVER_URI}/urls`);
+  const { data } = await axios.get(`${getRoot()}/urls`);
   return data;
 };
 

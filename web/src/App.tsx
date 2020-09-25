@@ -7,6 +7,7 @@ import { TextInput } from "./components/TextInput";
 import { Container } from "./components/Container";
 import { Button } from "semantic-ui-react";
 import { useToasts } from "react-toast-notifications";
+import { getRoot } from "./utils/helpers";
 
 const schema = yup.object().shape({
   url: yup.string().trim().url().required(),
@@ -27,7 +28,7 @@ function App() {
 
   // generate short url mutation
   const [generateSlug, { isLoading }] = useMutation(() =>
-    axios.post(`${process.env.REACT_APP_SERVER_URI}/add-shortUrl`, {
+    axios.post(`${getRoot()}/add-shortUrl`, {
       url,
     })
   );
@@ -48,10 +49,7 @@ function App() {
       // check if status is success with status code 201
       // if success, set other inputs value to generated slug url
       if (generateResponse?.status === 201) {
-        var slug =
-          process.env.REACT_APP_SERVER_URI +
-          "/" +
-          generateResponse.data.shortUrl.slug;
+        var slug = getRoot() + "/" + generateResponse.data.shortUrl.slug;
         setshortUrl(slug);
       }
       addToast("Successfully generated.", {
