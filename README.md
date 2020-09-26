@@ -1,6 +1,6 @@
 ![Url Shortener](https://i.ibb.co/c8Gf5yB/logo.png)
 # Url Shortener
-Url shortener app powered by node.js + express and react.
+Url shortener app powered by Node.js + Express and React in TypeScript.
 
 ![Url Shortener](https://i.ibb.co/B263MQ4/url-shortener-ss.png)
 
@@ -52,23 +52,26 @@ To deploy heroku,
 
 ## Technologies
 - ### Back end
-  - [TypeScript](https://github.com/microsoft/TypeScript)
   - [Express](https://expressjs.com/) - Nodejs framwork for building the REST Apis
   - [Node.js](https://github.com/nodejs/node) - Nodejs framwork for building the REST Apis
   - [Mongodb](http://mongodb.com/) - Document oriented NoSQL database
   - [Mongoose](https://http://mongoosejs.com) - MongoDB object modeling tool
   - [nanoid](https://github.com/ai/nanoid) - URL-friendly, unique string ID generator
+  - [yup](https://github.com/jquense/yup) - Javascript object schema validation
     
 - ### Front end
   - [React](https://reactjs.org/) - JavaScript library for building user interfaces.
   - [react-query](https://github.com/tannerlinsley/react-query) - Fetching, caching and updating asynchronous data
   - [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI-React) - Responsive front-end framework
+  - [yup](https://github.com/jquense/yup) - Javascript object schema validation
 
 ## Roadmap
 
 - [X] Url shortener - server
 - [X] Url shortener - web
 - [X] Duplicate slug check
+- [X] Url validation on front end
+- [X] Url validation on back end
 - [ ] User authentication
 - [ ] User-shortLink relation
 - [ ] My link history
