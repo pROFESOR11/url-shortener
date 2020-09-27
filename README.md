@@ -5,7 +5,7 @@ Url shortener app powered by Node.js + Express and React in TypeScript.
 ![Url Shortener](https://i.ibb.co/B263MQ4/url-shortener-ss.png)
 
 ## Demo
-[https://e11.herokuapp.com/](https://e11.herokuapp.com/)
+[Demo](https://e11.herokuapp.com/)
 
 ## Quick Start
 ```sh
